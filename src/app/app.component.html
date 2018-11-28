@@ -7,26 +7,26 @@
 <main>
   <div class="slideshow-container">
     <div class="slide fade">
-      <img class="item" src="assets/img/QandA.png" alt="Q&A" style="width: 100%">
+      <img class="item" src="assets/QandA.png" alt="Q&A" style="width: 100%">
       <div class="text">Q&A</div>
     </div>
     <div class="slide fade">
-      <img class="item" src="assets/img/blog.png" alt="blog" style="width: 100%">
+      <img class="item" src="assets/blog.png" alt="blog" style="width: 100%">
       <div class="text">部員ブログ</div>
     </div>
     <div class="slide fade">
-      <img class="item" src="assets/img/clubmagazine.png" alt="LinuxClubMagazine" style="width: 100%">
+      <img class="item" src="assets/clubmagazine.png" alt="LinuxClubMagazine" style="width: 100%">
       <div class="text">LinuxClubMagazine</div>
     </div>
 
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
+    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+    <a class="next" (click)="plusSlides(1)">&#10095;</a>
   </div>
 
   <div class="slider">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot" (click)="currentSlide(1)"></span>
+    <span class="dot" (click)="currentSlide(2)"></span>
+    <span class="dot" (click)="currentSlide(3)"></span>
   </div>
 </main>
 <footer>
