@@ -8,25 +8,37 @@
   <div class="slideshow-container">
     <div class="slide fade">
       <img class="item" src="assets/QandA.png" alt="Q&A" style="width: 100%">
-      <div class="text">Q&A</div>
+      <div class="text crimson">Q&A</div>
     </div>
     <div class="slide fade">
       <img class="item" src="assets/blog.png" alt="blog" style="width: 100%">
-      <div class="text">部員ブログ</div>
+      <div class="text crimson">部員ブログ</div>
     </div>
     <div class="slide fade">
       <img class="item" src="assets/clubmagazine.png" alt="LinuxClubMagazine" style="width: 100%">
-      <div class="text">LinuxClubMagazine</div>
+      <div class="text crimson">LinuxClubMagazine</div>
     </div>
 
     <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
     <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+    <div class="slider">
+      <span class="dot" (click)="currentSlide(1)"></span>
+      <span class="dot" (click)="currentSlide(2)"></span>
+      <span class="dot" (click)="currentSlide(3)"></span>
+    </div>
   </div>
 
-  <div class="slider">
-    <span class="dot" (click)="currentSlide(1)"></span>
-    <span class="dot" (click)="currentSlide(2)"></span>
-    <span class="dot" (click)="currentSlide(3)"></span>
+  
+  <div class="grid-container">
+    <div class="activity-date">
+      <h2 class="crimson">活動日</h2>
+      <p>hello</p>
+    </div>
+    <div class="twitter">
+      <h2 class="crimson">Twitter</h2>
+      <a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" href="https://twitter.com/lc_tut?ref_src=twsrc%5Etfw">Tweets by lc_tut</a>
+    </div>
   </div>
 </main>
 <footer>
