@@ -1,4 +1,3 @@
-
 header
     width: 100%;
     padding: 8px;
@@ -27,23 +26,25 @@ header
 main 
     padding: 8px;
 
-    .slideshow-container
+    div.slideshow-container
         width: 80%;
+        height: auto;
         padding-bottom: 20px;
         margin: 25px auto;
         max-width: 1000px;
-        background: #f8f8f8;
         position: relative;
+        background: #fbfbfb;
+        transition: 1.0s;
 
         .slide 
             display: none;
             width: 100%;
-            height: 100%;
             .item
+                height: 80vh;
                 width: 100%;
                 
             .text 
-                color: yellow;
+                color: #545454;
                 font-size: 30px;
                 padding: 8px 12px;
                 text-align: center;
@@ -76,8 +77,8 @@ main
             background-color: rgba(0, 0, 0, 0.8);
         
 
-    
-
+    div.slideshow-container:hover
+        box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
 
 
     .slider 
@@ -129,9 +130,9 @@ main
             align-items: center;
             text-align: center;
             border-radius: 10px;
-            background: #f8f8f8;
-            box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
+            transition: 1.0s;
+            background: #fbfbfb;
+            color: #545454;
 
         div:hover
             box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
@@ -139,12 +140,14 @@ main
         div.activity-date
             h2
                 font-size: 2rem;
+            
             p
                 justify-self: center;
                 
         div.twitter
             h2
                 font-size: 2rem;
+                overflow: visible;
                 margin-bottom: 50px;
 
             a
