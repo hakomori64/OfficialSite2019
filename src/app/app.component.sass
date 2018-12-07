@@ -25,10 +25,11 @@ header
     
 main 
     padding: 8px;
+    width: 100vw;
 
     div.slideshow-container
         width: 80%;
-        height: auto;
+        height: 99%;
         padding-bottom: 20px;
         margin: 25px auto;
         max-width: 1000px;
@@ -39,13 +40,70 @@ main
         .slide 
             display: none;
             width: 100%;
+            height: 50vw;
+            max-height: 500px;
+            position: relative;
+            overflow-y: hidden;
+
             .item
-                height: 80vh;
-                width: 100%;
-                
-            .text 
-                color: #545454;
-                font-size: 30px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-height: 100%;
+                min-width: 100%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            
+            .text
+                //text-indent: 100%;
+                //white-space: nowrap;
+                //overflow: hidden;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                vertical-align: center;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); 
+                color: rgba(200, 200, 200, 0);
+                background: rgba(0,0,0,0);
+                font-size: 4rem;
+                font-weight: bold;
+                padding: 8px 12px;
+                text-align: center;
+                transition: 1.0s;
+
+            .text:hover
+                text-indent: 0;
+                white-space: normal;
+                overflow: hidden;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                vertical-align: center;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); 
+                color: #eeeeee;
+                background: rgba(0,0,0,0.4);
+                font-size: 4rem;
+                font-weight: bold;
                 padding: 8px 12px;
                 text-align: center;
             
@@ -88,6 +146,7 @@ main
             height: 15px;
             width: 15px;
             margin: 0 2px;
+            margin-top: 10px;
             background-color: #bbb;
             border-radius: 50%;
             display: inline-block;
