@@ -17,6 +17,10 @@ export class AppComponent implements OnInit {
     this.slides = document.getElementsByClassName('slide');
     this.dots = document.getElementsByClassName('dot');
     this.showSlide(this.slideIndex);
+    setInterval(()=> {
+      this.slideIndex++;
+      this.showSlide(this.slideIndex);
+    }, 10000);
     console.log(this.slides);
     console.log(this.dots);
   }
@@ -31,6 +35,11 @@ export class AppComponent implements OnInit {
     this.showSlide(this.slideIndex);
   }
 
+  nextSlide(): void {
+    this.slideIndex++;
+    this.showSlide(this.slideIndex);
+  }
+
   showSlide(n: number): void {
     if (n > this.slides.length) {this.slideIndex = 1}
     if (n < 1) {this.slideIndex = this.slides.length}
@@ -42,6 +51,8 @@ export class AppComponent implements OnInit {
     }
     this.slides[this.slideIndex-1].style.display = "block";
     this.dots[this.slideIndex-1].className += " active";
+
+    
   }
 
 }
