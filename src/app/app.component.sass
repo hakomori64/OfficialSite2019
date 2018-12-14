@@ -1,16 +1,18 @@
 header
     width: 100%;
     padding: 8px;
-    background: linear-gradient(45deg, blueviolet, crimson);
-    height: 350px;
+    //background: linear-gradient(45deg, blueviolet, crimson);
+    background: #ddd url(../assets/img/SiteHeader.png) no-repeat center center;
+    background-size: cover;
+    height: 250px;
     color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     position: relative;
-    border-bottom-left-radius: 50% 15%;
-    border-bottom-right-radius: 50% 15%;
+    //border-bottom-left-radius: 50% 15%;
+    //border-bottom-right-radius: 50% 15%;
 
     h1
         font-size: 4rem;
@@ -28,14 +30,14 @@ main
     width: 100vw;
 
     div.slideshow-container
-        width: 80%;
+        width: 90%;
         height: 99%;
         padding-bottom: 20px;
         margin: 25px auto;
-        max-width: 1000px;
         position: relative;
         background: #fbfbfb;
         transition: 1.0s;
+        box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2)
 
         .slide 
             display: none;
@@ -75,10 +77,17 @@ main
                 transform: translate(-50%, -50%); 
                 color: rgba(200, 200, 200, 0);
                 background: rgba(0,0,0,0);
-                font-size: 7vw;
                 font-weight: bold;
                 padding: 8px 12px;
                 transition: 1.0s;
+
+                a
+                    width: 100%;
+                    height: 100%;
+                    font-size: 7vw;
+                    text-decoration: none;
+                    text-align: center;
+                    color: white;
 
             .text:hover
                 text-indent: 0;
@@ -172,7 +181,8 @@ main
             to {opacity: 1}
         
     .grid-container
-        margin-top: 30px;
+        margin: 10px;
+        padding: 10px;
         display: grid;
         grid-auto-rows: 400px;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,21 +200,46 @@ main
             transition: 1.0s;
             background: #fbfbfb;
             color: #545454;
+            box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2)
+            margin: 0 10px;
 
         div:hover
-            box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0 rgba(0,0,0,0.4);
 
         div.activity-date
             h2
                 font-size: 2rem;
             
-            p
-                justify-self: center;
-                
+            table.table
+                width: 70%;
+                height: 50%;
+                margin: auto auto;
+                border-collapse: separate;
+                border-spacing: 0px 3px;
+                //border: rgba(0,172,237,0.5) solid;
+                border-radius: 5px;
+                background: rgba(0,172,237,0.1);
+
+                th
+                    padding-left: 5px;
+                    vertical-align: middle;
+                    text-align: left;
+                    color: #f0f0f0;
+                    font-size: 12px;
+                    background: rgba(0,172,237,1);
+                td
+                    padding: 12px;
+                    vertical-align: middle;
+                    text-align: left;
+                    font-size: 11px;
+
+            small
+                color: #888888;
         div.twitter
             h2
                 font-size: 2rem;
                 overflow: visible;
                 margin-bottom: 50px;
 
-            a
+footer
+    height: 30px;    

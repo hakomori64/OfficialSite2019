@@ -7,16 +7,16 @@
 <main>
   <div class="slideshow-container">
     <div class="slide fade">
-      <img class="item" src="assets/img/QandA.jpg" alt="Photo by Kari Shea on Unsplash" style="width: 100%">
-      <div class="text crimson">Q&A</div>
+        <img class="item" src="assets/img/QandA.jpg" alt="Photo by Kari Shea on Unsplash" style="width: 100%">
+      <div class="text crimson"><a href="http://www2.linux.it.teu.ac.jp/linux/faq.html">Q&A</a></div>
     </div>
     <div class="slide fade">
       <img class="item" src="assets/img/blog.jpg" alt="Photo by Aaron Burden on Unsplash" style="width: 100%">
-      <div class="text crimson">部員ブログ</div>
+      <div class="text crimson"><a href="https://lc-tut.github.io/">部員ブログ</a></div>
     </div>
     <div class="slide fade">
       <img class="item" src="assets/img/magazine.jpg" alt="Photo by Jonas Jacobsson on Unsplash" style="width: 100%">
-      <div class="text crimson">LinuxClubMagazine</div>
+      <div class="text crimson"><a href="http://www2.linux.it.teu.ac.jp/~shinkan">LinuxClubMagazine</a></div>
     </div>
 
     <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
@@ -33,11 +33,29 @@
   <div class="grid-container">
     <div class="activity-date">
       <h2 class="crimson">活動日</h2>
-      <p>hello</p>
+      <table class="table">
+        <tr>
+          <th>曜日</th>
+          <th>活動場所</th>
+          <th>活動時間</th>
+        </tr>
+        <tr>
+          <td>火</td>
+          <td>講義実験棟301</td>
+          <td>18:30〜</td>
+        </tr>
+        <tr>
+          <td>金</td>
+          <td>講義実験棟306</td>
+          <td>18:30〜</td>
+        </tr>
+      </table>
+      <small>時間・場所は状況等により変わる場合があります。</small>
     </div>
     <div class="twitter">
       <h2 class="crimson">Twitter</h2>
-      <a class="twitter-timeline" data-width="300" data-height="300" data-theme="light" href="https://twitter.com/lc_tut?ref_src=twsrc%5Etfw">Tweets by lc_tut</a>
+      <p></p>
+      <a class="twitter-timeline" data-width="80%" data-height="80%" data-theme="light" href="https://twitter.com/lc_tut?ref_src=twsrc%5Etfw">Tweets by lc_tut</a>
     </div>
   </div>
 </main>
