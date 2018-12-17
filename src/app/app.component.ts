@@ -29,18 +29,18 @@ import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
         display: 'none',
         width: '100%',
         height: '50vw',
-        opacity: 0.2,
+        opacity: 0,
         maxHeight: '500px',
         position: 'relative',
         overflowY: 'hidden',
       })),
       transition('current => notCurrent', [
-        animate('1s', keyframes([
+        animate('200ms', keyframes([
           style({ display: 'none', offset: 0})
         ]))
       ]),
       transition('notCurrent => current', [
-        animate('1s ease-in')
+        animate('1s 200ms ease-in')
       ]),
     ]),
   ],
