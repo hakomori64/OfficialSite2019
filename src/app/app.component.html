@@ -1,20 +1,20 @@
 <header>
   <div class="top">
     <h1 class="title crimson"><a href="#">LinuxClub</a></h1>
-    <p class="lato">Official circle of Tokyo University of Technology</p>
+    <p class="lato">Official Circle of Tokyo University of Technology</p>
   </div>
 </header>
 <main>
   <div class="slideshow-container">
-    <div class="slide fade">
+    <div [@currentNotCurrent]="isCurrent[0] ? 'current' : 'notCurrent'" class="slide fade">
       <img class="item" src="assets/img/QandA.jpg" alt="Photo by Kari Shea on Unsplash" style="width: 100%">
       <a href="http://www2.linux.it.teu.ac.jp/linux/faq.html"><div class="text crimson">Q&A</div></a>
     </div>
-    <div class="slide fade">
+    <div [@currentNotCurrent]="isCurrent[1] ? 'current' : 'notCurrent'" class="slide fade">
       <img class="item" src="assets/img/blog.jpg" alt="Photo by Aaron Burden on Unsplash" style="width: 100%">
       <a href="https://lc-tut.github.io/"><div class="text crimson">部員ブログ</div></a>
     </div>
-    <div class="slide fade">
+    <div [@currentNotCurrent]="isCurrent[2] ? 'current' : 'notCurrent'" class="slide fade">
       <img class="item" src="assets/img/magazine.jpg" alt="Photo by Jonas Jacobsson on Unsplash" style="width: 100%">
       <a href="http://www2.linux.it.teu.ac.jp/~shinkan"><div class="text crimson">LinuxClubMagazine</div></a>
     </div>
@@ -60,5 +60,8 @@
   </div>
 </main>
 <footer>
-  
+  <div class="container">
+    <a href="http://www2.linux.it.teu.ac.jp/linux/information.html" class="information lato">活動内容</a>
+    <a href="http://www2.linux.it.teu.ac.jp/linux/contact.html" class="information lato">お問い合わせ</a>
+  </div>
 </footer>
