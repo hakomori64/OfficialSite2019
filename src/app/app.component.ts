@@ -49,6 +49,7 @@ export class AppComponent implements OnInit {
   slideIndex: number = 1;
   slides;
   dots;
+  id: any;
   isCurrent: boolean[] = new Array(3);
   
   constructor(@Inject(DOCUMENT) private document: any) {}
@@ -57,7 +58,7 @@ export class AppComponent implements OnInit {
     this.slides = document.getElementsByClassName('slide');
     this.dots = document.getElementsByClassName('dot');
     this.showSlide(this.slideIndex);
-    setInterval(()=> {
+    this.id = setInterval(()=> {
       this.slideIndex++;
       this.showSlide(this.slideIndex);
     }, 10000);
@@ -68,16 +69,31 @@ export class AppComponent implements OnInit {
   plusSlides(n: number): void {
     this.slideIndex += n;
     this.showSlide(this.slideIndex);
+    clearInterval(this.id);
+    this.id = setInterval(()=> {
+      this.slideIndex++;
+      this.showSlide(this.slideIndex);
+    }, 10000);
   }
 
   currentSlide(n: number): void {
     this.slideIndex = n;
     this.showSlide(this.slideIndex);
+    clearInterval(this.id);
+    this.id = setInterval(()=> {
+      this.slideIndex++;
+      this.showSlide(this.slideIndex);
+    }, 10000);
   }
 
   nextSlide(): void {
     this.slideIndex++;
     this.showSlide(this.slideIndex);
+    clearInterval(this.id);
+    this.id = setInterval(()=> {
+      this.slideIndex++;
+      this.showSlide(this.slideIndex);
+    }, 10000);
   }
 
   showSlide(n: number): void {
@@ -93,8 +109,6 @@ export class AppComponent implements OnInit {
     //this.slides[this.slideIndex-1].style.display = "block";
     this.isCurrent[this.slideIndex - 1] = true;
     this.dots[this.slideIndex-1].className += " active";
-
-    
   }
 
 }
