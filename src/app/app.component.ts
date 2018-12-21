@@ -41,7 +41,7 @@ import {
       transition('notCurrent => current', [
         animate('2s', keyframes([
           style({ display: 'block', offset: 0}),
-          style({ opacity: 0.5, offset: 0.5})
+          style({ opacity: 0.9, offset: 0.9})
         ]))
       ]),
     ]),
