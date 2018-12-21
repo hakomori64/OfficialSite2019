@@ -8,7 +8,6 @@ import {
   transition,
   keyframes
 } from '@angular/animations';
-import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -35,12 +34,15 @@ import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
         overflowY: 'hidden',
       })),
       transition('current => notCurrent', [
-        animate('200ms', keyframes([
+        animate('1s', keyframes([
           style({ display: 'none', offset: 0})
         ]))
       ]),
       transition('notCurrent => current', [
-        animate('1s 200ms ease-in')
+        animate('2s', keyframes([
+          style({ display: 'block', offset: 0}),
+          style({ opacity: 0.5, offset: 0.5})
+        ]))
       ]),
     ]),
   ],
@@ -100,15 +102,12 @@ export class AppComponent implements OnInit {
     if (n > this.slides.length) {this.slideIndex = 1}
     if (n < 1) {this.slideIndex = this.slides.length}
     for (let i = 0; i < this.dots.length; i++) {
-      //this.slides[i].style.display = "none";
       this.isCurrent[i] = false;
     }
     for (let i = 0; i < this.dots.length; i++) {
       this.dots[i].className = this.dots[i].className.replace("active", "");
     }
-    //this.slides[this.slideIndex-1].style.display = "block";
     this.isCurrent[this.slideIndex - 1] = true;
     this.dots[this.slideIndex-1].className += " active";
   }
-
 }
